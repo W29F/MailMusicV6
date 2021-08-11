@@ -9,5 +9,5 @@ RUN mkdir /app/
 COPY . /app/
 WORKDIR /app/
 RUN pip3 install -U -r requirements.txt
-RUN RUN pip install py-tgcalls -U
+RUN pip install git+https://github.com/pytgcalls/pytgcalls -U
 CMD python3 -m MailMusic
