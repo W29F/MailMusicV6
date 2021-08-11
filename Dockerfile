@@ -9,5 +9,4 @@ RUN mkdir /app/
 COPY . /app/
 WORKDIR /app/
 RUN pip3 install -U -r requirements.txt
-RUN pip install git+https://github.com/pytgcalls/pytgcalls -U
 CMD python3 -m MailMusic
