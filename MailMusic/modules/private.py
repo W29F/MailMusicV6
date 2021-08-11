@@ -50,7 +50,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📲 Updates", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
