@@ -25,8 +25,9 @@ from MailMusic.config import DURATION_LIMIT
 from MailMusic.helpers.errors import DurationLimitError
 
 ydl_opts = {
-    "format": "bestaudio/best",
+   "format": "bestaudio/best",
     "verbose": True,
+    "addmetadata": True,
     "geo-bypass": True,
     "nocheckcertificate": True,
     "outtmpl": "downloads/%(id)s.%(ext)s",
