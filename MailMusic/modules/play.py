@@ -27,9 +27,8 @@ import requests
 import wget
 from PIL import Image, ImageDraw, ImageFont
 from pyrogram import Client, filters
-from pyrogram.types import Voice
 from pyrogram.errors import UserAlreadyParticipant
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
@@ -37,13 +36,12 @@ from MailMusic.config import ARQ_API_KEY
 from MailMusic.config import BOT_NAME as bn
 from MailMusic.config import DURATION_LIMIT
 from MailMusic.config import UPDATES_CHANNEL as updateschannel
-from MailMusic.config import que
+from MailMusic.config import ARQ_API_KEY, DURATION_LIMIT, que
 from MailMusic.function.admins import admins as a
 from MailMusic.helpers.admins import get_administrators
 from MailMusic.helpers.channelmusic import get_chat_id
 from MailMusic.helpers.errors import DurationLimitError
-from MailMusic.helpers.decorators import errors
-from MailMusic.helpers.decorators import authorized_users_only
+from MailMusic.helpers.decorators import errors, authorized_users_only 
 from MailMusic.helpers.filters import command, other_filters
 from MailMusic.helpers.gets import get_file_name
 from MailMusic.services.callsmusic import callsmusic
@@ -199,7 +197,9 @@ def r_ply(type_):
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
             ],
-            [InlineKeyboardButton("❌ Close", "cls")],
+            [
+                InlineKeyboardButton("❌ Close", "cls")
+            ],
         ]
     )
     return mar
@@ -416,7 +416,9 @@ async def m_cb(b, cb):
                 [
                     InlineKeyboardButton("Playlist 📖", "playlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [
+                    InlineKeyboardButton("❌ Close", "cls")
+                ],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -551,7 +553,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [
+                    InlineKeyboardButton(text="❌ Close", callback_data="cls")
+                ],
             ]
         )
         file_name = get_file_name(audio)
@@ -602,7 +606,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [
+                    InlineKeyboardButton(text="❌ Close", callback_data="cls")
+                ],
             ]
         )
         requested_by = message.from_user.first_name
@@ -645,7 +651,9 @@ async def play(_, message: Message):
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="Close 🛑", callback_data="cls")],
+                    [
+                        InlineKeyboardButton(text="Close 🛑", callback_data="cls")
+                    ],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -685,7 +693,9 @@ async def play(_, message: Message):
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                         InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                    [
+                        InlineKeyboardButton(text="❌ Close", callback_data="cls")
+                    ],
                 ]
             )
             requested_by = message.from_user.first_name
@@ -833,7 +843,9 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                 InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [
+                InlineKeyboardButton(text="❌ Close", callback_data="cls")
+            ],
         ]
     )
     requested_by = message.from_user.first_name
@@ -976,7 +988,9 @@ async def jiosaavn(client: Client, message_: Message):
                     text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
                 )
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [
+                InlineKeyboardButton(text="❌ Close", callback_data="cls")
+            ],
         ]
     )
     file_path = await convert(wget.download(slink))
@@ -1081,7 +1095,9 @@ async def lol_cb(b, cb):
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                 InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [
+                InlineKeyboardButton(text="❌ Close", callback_data="cls")
+            ],
         ]
     )
     requested_by = useer_name
