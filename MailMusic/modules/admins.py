@@ -14,6 +14,9 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# Modified by @InukaAsith
+
+# Added /auth and /deauth by azimazizov9150 <https://github.com/azimazizov9150>
 
 from asyncio import QueueEmpty
 from MailMusic.config import que
