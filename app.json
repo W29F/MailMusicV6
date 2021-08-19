@@ -13,8 +13,8 @@
    }
    {
      "url": "heroku/nodejs"
-   } 
-  ],        
+   }  
+  ],         
   "env": {
     "SESSION_NAME": {
       "description": "Pyrogram session string",
