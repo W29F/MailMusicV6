@@ -26,7 +26,7 @@
 
 ### 💜 Heroku/Railway
 
-[![Deploy+on+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://github.com/W29F/MailMusicV6)
+[![Deploy+on+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/W29F/MailMusicV6)
 [![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/W29F/MailMusicV6&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,BOT_NAME,SUPPORT_GROUP,PROJECT_NAME,ARQ_API_KEY,ASSISTANT_NAME,BG_IMAGE,UPDATES_CHANNEL,API_ID,PMPERMIT,API_HASH,SUDO_USERS,DURATION_LIMIT)
 
 Get pyrogram (p)  `SESSION` from here:
