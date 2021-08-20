@@ -1,5 +1,5 @@
 {
-  "name": "MailMusic",
+  "name": "MailMusic,
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/W29F/MailMusicV6",
@@ -14,7 +14,7 @@
    {
      "url": "heroku/nodejs"
    }  
-  ],         
+  ],        
   "env": {
     "SESSION_NAME": {
       "description": "Pyrogram session string",
@@ -41,7 +41,7 @@
     "PROJECT_NAME": {
       "description": "Your MusicPlayer project Name.",
       "required": false,
-      "value": "MailMusic v5.5"
+      "value": "Mailmusic v7"
     },
     "ASSISTANT_NAME": {
       "description": "Your MusicPlayer's assistant Username without @.",
